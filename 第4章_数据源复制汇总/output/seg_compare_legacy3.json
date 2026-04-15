@@ -1,0 +1,193 @@
+{
+  "generated_at": "2026-04-05T13:48:23",
+  "preset": "legacy3",
+  "groups": [
+    {
+      "label": "Current",
+      "input_path": "/ai/0309/cloud/output/v2_training_torch_dataset_v2_segonly",
+      "latest_run_dir": "/ai/0309/cloud/output/v2_training_torch_dataset_v2_segonly/20260404_185555",
+      "status": "ok",
+      "best_metric": "val_iou",
+      "best_score": 0.7309962156447855,
+      "best_epoch": 195,
+      "val_iou": 0.7309962156447855,
+      "val_leak_iou": 0.4734614141239821,
+      "val_precision": 0.6952354215127938,
+      "val_recall": 0.6310061153174141,
+      "val_f1": 0.6615654696027173,
+      "val_global_leak_iou": 0.49428302586182316,
+      "best_checkpoint": "/ai/0309/cloud/output/v2_training_torch_dataset_v2_segonly/20260404_185555/best_model.pt",
+      "best_checkpoint_source": "history_inferred",
+      "history_path": "/ai/0309/cloud/output/v2_training_torch_dataset_v2_segonly/20260404_185555/history.json",
+      "args_path": "/ai/0309/cloud/output/v2_training_torch_dataset_v2_segonly/20260404_185555/args.json",
+      "topk_path": null,
+      "note": null
+    },
+    {
+      "label": "Balanced",
+      "input_path": "/ai/0309/cloud/output/seg_balanced",
+      "latest_run_dir": "/ai/0309/cloud/output/seg_balanced/20260326_110221",
+      "status": "ok",
+      "best_metric": "val_iou",
+      "best_score": 0.7252375870253317,
+      "best_epoch": 200,
+      "val_iou": 0.7252375870253317,
+      "val_leak_iou": 0.46205475260760487,
+      "val_precision": 0.6979218413644643,
+      "val_recall": 0.6136793826441468,
+      "val_f1": 0.6530952196482529,
+      "val_global_leak_iou": 0.4848859616324887,
+      "best_checkpoint": "/ai/0309/cloud/output/seg_balanced/20260326_110221/best_model.pt",
+      "best_checkpoint_source": "history_inferred",
+      "history_path": "/ai/0309/cloud/output/seg_balanced/20260326_110221/history.json",
+      "args_path": "/ai/0309/cloud/output/seg_balanced/20260326_110221/args.json",
+      "topk_path": null,
+      "note": null
+    },
+    {
+      "label": "Recall",
+      "input_path": "/ai/0309/cloud/output/seg_recall",
+      "latest_run_dir": "/ai/0309/cloud/output/seg_recall/20260326_190253",
+      "status": "ok",
+      "best_metric": "val_iou",
+      "best_score": 0.7295185040403164,
+      "best_epoch": 210,
+      "val_iou": 0.7295185040403164,
+      "val_leak_iou": 0.47105264774073374,
+      "val_precision": 0.6642020037709342,
+      "val_recall": 0.6539749563191614,
+      "val_f1": 0.6590488068817519,
+      "val_global_leak_iou": 0.49147859389960336,
+      "best_checkpoint": "/ai/0309/cloud/output/seg_recall/20260326_190253/best_model.pt",
+      "best_checkpoint_source": "history_inferred",
+      "history_path": "/ai/0309/cloud/output/seg_recall/20260326_190253/history.json",
+      "args_path": "/ai/0309/cloud/output/seg_recall/20260326_190253/args.json",
+      "topk_path": null,
+      "note": null
+    }
+  ],
+  "rankings": {
+    "global_leak_iou": [
+      {
+        "label": "Current",
+        "value": 0.49428302586182316,
+        "run_dir": "/ai/0309/cloud/output/v2_training_torch_dataset_v2_segonly/20260404_185555"
+      },
+      {
+        "label": "Recall",
+        "value": 0.49147859389960336,
+        "run_dir": "/ai/0309/cloud/output/seg_recall/20260326_190253"
+      },
+      {
+        "label": "Balanced",
+        "value": 0.4848859616324887,
+        "run_dir": "/ai/0309/cloud/output/seg_balanced/20260326_110221"
+      }
+    ],
+    "f1": [
+      {
+        "label": "Current",
+        "value": 0.6615654696027173,
+        "run_dir": "/ai/0309/cloud/output/v2_training_torch_dataset_v2_segonly/20260404_185555"
+      },
+      {
+        "label": "Recall",
+        "value": 0.6590488068817519,
+        "run_dir": "/ai/0309/cloud/output/seg_recall/20260326_190253"
+      },
+      {
+        "label": "Balanced",
+        "value": 0.6530952196482529,
+        "run_dir": "/ai/0309/cloud/output/seg_balanced/20260326_110221"
+      }
+    ],
+    "recall": [
+      {
+        "label": "Recall",
+        "value": 0.6539749563191614,
+        "run_dir": "/ai/0309/cloud/output/seg_recall/20260326_190253"
+      },
+      {
+        "label": "Current",
+        "value": 0.6310061153174141,
+        "run_dir": "/ai/0309/cloud/output/v2_training_torch_dataset_v2_segonly/20260404_185555"
+      },
+      {
+        "label": "Balanced",
+        "value": 0.6136793826441468,
+        "run_dir": "/ai/0309/cloud/output/seg_balanced/20260326_110221"
+      }
+    ],
+    "precision": [
+      {
+        "label": "Balanced",
+        "value": 0.6979218413644643,
+        "run_dir": "/ai/0309/cloud/output/seg_balanced/20260326_110221"
+      },
+      {
+        "label": "Current",
+        "value": 0.6952354215127938,
+        "run_dir": "/ai/0309/cloud/output/v2_training_torch_dataset_v2_segonly/20260404_185555"
+      },
+      {
+        "label": "Recall",
+        "value": 0.6642020037709342,
+        "run_dir": "/ai/0309/cloud/output/seg_recall/20260326_190253"
+      }
+    ],
+    "iou": [
+      {
+        "label": "Current",
+        "value": 0.7309962156447855,
+        "run_dir": "/ai/0309/cloud/output/v2_training_torch_dataset_v2_segonly/20260404_185555"
+      },
+      {
+        "label": "Recall",
+        "value": 0.7295185040403164,
+        "run_dir": "/ai/0309/cloud/output/seg_recall/20260326_190253"
+      },
+      {
+        "label": "Balanced",
+        "value": 0.7252375870253317,
+        "run_dir": "/ai/0309/cloud/output/seg_balanced/20260326_110221"
+      }
+    ],
+    "leak_iou": [
+      {
+        "label": "Current",
+        "value": 0.4734614141239821,
+        "run_dir": "/ai/0309/cloud/output/v2_training_torch_dataset_v2_segonly/20260404_185555"
+      },
+      {
+        "label": "Recall",
+        "value": 0.47105264774073374,
+        "run_dir": "/ai/0309/cloud/output/seg_recall/20260326_190253"
+      },
+      {
+        "label": "Balanced",
+        "value": 0.46205475260760487,
+        "run_dir": "/ai/0309/cloud/output/seg_balanced/20260326_110221"
+      }
+    ]
+  },
+  "deltas_vs_first": [
+    {
+      "label": "Current",
+      "delta_global_leak_iou": "+0.00 pp",
+      "delta_f1": "+0.00 pp",
+      "delta_recall": "+0.00 pp"
+    },
+    {
+      "label": "Balanced",
+      "delta_global_leak_iou": "-0.94 pp",
+      "delta_f1": "-0.85 pp",
+      "delta_recall": "-1.73 pp"
+    },
+    {
+      "label": "Recall",
+      "delta_global_leak_iou": "-0.28 pp",
+      "delta_f1": "-0.25 pp",
+      "delta_recall": "+2.30 pp"
+    }
+  ]
+}

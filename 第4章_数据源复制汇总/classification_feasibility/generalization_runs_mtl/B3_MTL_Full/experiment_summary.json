@@ -1,0 +1,868 @@
+{
+  "task_name": "4-class-liquid-type-classification",
+  "raw_data_path": "/ai/0309/cloud/liquid_leakage_dataset_with_groups.h5",
+  "split_mode": "group_kfold",
+  "prepare_only": false,
+  "dense_class_names": {
+    "0": "清水",
+    "1": "盐水",
+    "2": "混合物",
+    "3": "无渗漏"
+  },
+  "raw_to_dense_label_map": {
+    "0": 0,
+    "1": 1,
+    "4": 2,
+    "5": 3
+  },
+  "fold_results": [
+    {
+      "fold_name": "fold_01",
+      "split_id": 1,
+      "train_path": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/splits/fold_01_train.h5",
+      "val_path": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/splits/fold_01_val.h5",
+      "split_summary": {
+        "fold_name": "fold_01",
+        "split_id": 1,
+        "train": {
+          "num_samples": 336,
+          "class_counts_dense": {
+            "0": 112,
+            "1": 111,
+            "2": 75,
+            "3": 38
+          },
+          "class_names_dense": {
+            "0": "清水",
+            "1": "盐水",
+            "2": "混合物",
+            "3": "无渗漏"
+          },
+          "num_groups": 115
+        },
+        "val": {
+          "num_samples": 85,
+          "class_counts_dense": {
+            "0": 30,
+            "1": 27,
+            "2": 18,
+            "3": 10
+          },
+          "class_names_dense": {
+            "0": "清水",
+            "1": "盐水",
+            "2": "混合物",
+            "3": "无渗漏"
+          },
+          "num_groups": 29
+        },
+        "train_path": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/splits/fold_01_train.h5",
+        "val_path": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/splits/fold_01_val.h5"
+      },
+      "run_dir": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/fold_01/training/20260413_095019",
+      "eval": {
+        "run_dir": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/fold_01/training/20260413_095019",
+        "num_val_samples": 85,
+        "overall_accuracy": 0.9882352941176471,
+        "balanced_accuracy": 0.9916666666666667,
+        "macro_precision": 0.9772727272727273,
+        "macro_recall": 0.9916666666666667,
+        "macro_f1": 0.9838579499596449,
+        "weighted_f1": 0.9884157052651569,
+        "confusion_matrix": [
+          [
+            29,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            27,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            18,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            10
+          ]
+        ],
+        "dense_class_names": {
+          "0": "清水",
+          "1": "盐水",
+          "2": "混合物",
+          "3": "无渗漏"
+        },
+        "classification_report": {
+          "清水": {
+            "precision": 1.0,
+            "recall": 0.9666666666666667,
+            "f1-score": 0.983050847457627,
+            "support": 30
+          },
+          "盐水": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 27
+          },
+          "混合物": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 18
+          },
+          "无渗漏": {
+            "precision": 0.9090909090909091,
+            "recall": 1.0,
+            "f1-score": 0.9523809523809523,
+            "support": 10
+          },
+          "accuracy": 0.9882352941176471,
+          "macro avg": {
+            "precision": 0.9772727272727273,
+            "recall": 0.9916666666666667,
+            "f1-score": 0.9838579499596449,
+            "support": 85
+          },
+          "weighted avg": {
+            "precision": 0.9893048128342247,
+            "recall": 0.9882352941176471,
+            "f1-score": 0.9884157052651569,
+            "support": 85
+          }
+        }
+      },
+      "training": {
+        "run_dir": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/fold_01/training/20260413_095019",
+        "best_epoch": 300,
+        "best_metric": "val_cls_macro_f1",
+        "best_score": 0.9838579499596449,
+        "best_ranking_keys": [
+          "cls_macro_f1",
+          "global_miou",
+          "global_leak_iou"
+        ],
+        "best_ranking": [
+          0.9838579499596449,
+          0.9692880479311765,
+          0.9698296945173196
+        ],
+        "best_val_metrics": {
+          "loss": 0.6486660667384664,
+          "iou": 0.8883957736944805,
+          "leak_iou": 0.8115581091485565,
+          "precision": 0.9957768342236223,
+          "recall": 0.9738351974638895,
+          "f1": 0.9846838000428898,
+          "global_leak_iou": 0.9698296945173196,
+          "global_bg_iou": 0.9687464013450333,
+          "global_miou": 0.9692880479311765,
+          "accuracy": 0.9844094669117647,
+          "tp": 43621,
+          "fp": 185,
+          "tn": 42062,
+          "fn": 1172,
+          "cls_loss": 0.39625839804379365,
+          "cls_acc": 0.9882352941176471,
+          "cls_macro_precision": 0.9772727272727273,
+          "cls_macro_recall": 0.9916666666666667,
+          "cls_macro_f1": 0.9838579499596449,
+          "cls_balanced_acc": 0.9916666666666667,
+          "cls_weighted_f1": 0.9884157052651569
+        }
+      }
+    },
+    {
+      "fold_name": "fold_02",
+      "split_id": 2,
+      "train_path": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/splits/fold_02_train.h5",
+      "val_path": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/splits/fold_02_val.h5",
+      "split_summary": {
+        "fold_name": "fold_02",
+        "split_id": 2,
+        "train": {
+          "num_samples": 335,
+          "class_counts_dense": {
+            "0": 113,
+            "1": 111,
+            "2": 72,
+            "3": 39
+          },
+          "class_names_dense": {
+            "0": "清水",
+            "1": "盐水",
+            "2": "混合物",
+            "3": "无渗漏"
+          },
+          "num_groups": 115
+        },
+        "val": {
+          "num_samples": 86,
+          "class_counts_dense": {
+            "0": 29,
+            "1": 27,
+            "2": 21,
+            "3": 9
+          },
+          "class_names_dense": {
+            "0": "清水",
+            "1": "盐水",
+            "2": "混合物",
+            "3": "无渗漏"
+          },
+          "num_groups": 29
+        },
+        "train_path": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/splits/fold_02_train.h5",
+        "val_path": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/splits/fold_02_val.h5"
+      },
+      "run_dir": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/fold_02/training/20260413_100456",
+      "eval": {
+        "run_dir": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/fold_02/training/20260413_100456",
+        "num_val_samples": 86,
+        "overall_accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "macro_f1": 1.0,
+        "weighted_f1": 1.0,
+        "confusion_matrix": [
+          [
+            29,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            27,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            21,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            9
+          ]
+        ],
+        "dense_class_names": {
+          "0": "清水",
+          "1": "盐水",
+          "2": "混合物",
+          "3": "无渗漏"
+        },
+        "classification_report": {
+          "清水": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 29
+          },
+          "盐水": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 27
+          },
+          "混合物": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 21
+          },
+          "无渗漏": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 9
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 86
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 86
+          }
+        }
+      },
+      "training": {
+        "run_dir": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/fold_02/training/20260413_100456",
+        "best_epoch": 280,
+        "best_metric": "val_cls_macro_f1",
+        "best_score": 1.0,
+        "best_ranking_keys": [
+          "cls_macro_f1",
+          "global_miou",
+          "global_leak_iou"
+        ],
+        "best_ranking": [
+          1.0,
+          0.9921431591648582,
+          0.9923799903377399
+        ],
+        "best_val_metrics": {
+          "loss": 0.2004133112107714,
+          "iou": 0.909224378170962,
+          "leak_iou": 0.8265872260924496,
+          "precision": 0.9946077999823928,
+          "recall": 0.9977479963791315,
+          "f1": 0.9961754235139814,
+          "global_leak_iou": 0.9923799903377399,
+          "global_bg_iou": 0.9919063279919763,
+          "global_miou": 0.9921431591648582,
+          "accuracy": 0.9960596838662791,
+          "tp": 45191,
+          "fp": 245,
+          "tn": 42526,
+          "fn": 102,
+          "cls_loss": 0.0050651574078983685,
+          "cls_acc": 1.0,
+          "cls_macro_precision": 1.0,
+          "cls_macro_recall": 1.0,
+          "cls_macro_f1": 1.0,
+          "cls_balanced_acc": 1.0,
+          "cls_weighted_f1": 1.0
+        }
+      }
+    },
+    {
+      "fold_name": "fold_03",
+      "split_id": 3,
+      "train_path": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/splits/fold_03_train.h5",
+      "val_path": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/splits/fold_03_val.h5",
+      "split_summary": {
+        "fold_name": "fold_03",
+        "split_id": 3,
+        "train": {
+          "num_samples": 339,
+          "class_counts_dense": {
+            "0": 120,
+            "1": 108,
+            "2": 75,
+            "3": 36
+          },
+          "class_names_dense": {
+            "0": "清水",
+            "1": "盐水",
+            "2": "混合物",
+            "3": "无渗漏"
+          },
+          "num_groups": 116
+        },
+        "val": {
+          "num_samples": 82,
+          "class_counts_dense": {
+            "0": 22,
+            "1": 30,
+            "2": 18,
+            "3": 12
+          },
+          "class_names_dense": {
+            "0": "清水",
+            "1": "盐水",
+            "2": "混合物",
+            "3": "无渗漏"
+          },
+          "num_groups": 28
+        },
+        "train_path": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/splits/fold_03_train.h5",
+        "val_path": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/splits/fold_03_val.h5"
+      },
+      "run_dir": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/fold_03/training/20260413_101852",
+      "eval": {
+        "run_dir": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/fold_03/training/20260413_101852",
+        "num_val_samples": 82,
+        "overall_accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "macro_f1": 1.0,
+        "weighted_f1": 1.0,
+        "confusion_matrix": [
+          [
+            22,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            30,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            18,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            12
+          ]
+        ],
+        "dense_class_names": {
+          "0": "清水",
+          "1": "盐水",
+          "2": "混合物",
+          "3": "无渗漏"
+        },
+        "classification_report": {
+          "清水": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 22
+          },
+          "盐水": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 30
+          },
+          "混合物": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 18
+          },
+          "无渗漏": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 12
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 82
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 82
+          }
+        }
+      },
+      "training": {
+        "run_dir": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/fold_03/training/20260413_101852",
+        "best_epoch": 215,
+        "best_metric": "val_cls_macro_f1",
+        "best_score": 1.0,
+        "best_ranking_keys": [
+          "cls_macro_f1",
+          "global_miou",
+          "global_leak_iou"
+        ],
+        "best_ranking": [
+          1.0,
+          0.9919039448995954,
+          0.992137966015724
+        ],
+        "best_val_metrics": {
+          "loss": 0.1881292595838507,
+          "iou": 0.9080808844924202,
+          "leak_iou": 0.8242871079123945,
+          "precision": 0.9966417305509878,
+          "recall": 0.99546590173036,
+          "f1": 0.996053469127944,
+          "global_leak_iou": 0.992137966015724,
+          "global_bg_iou": 0.9916699237834669,
+          "global_miou": 0.9919039448995954,
+          "accuracy": 0.9959389291158537,
+          "tp": 43032,
+          "fp": 145,
+          "tn": 40595,
+          "fn": 196,
+          "cls_loss": 0.001073967722428885,
+          "cls_acc": 1.0,
+          "cls_macro_precision": 1.0,
+          "cls_macro_recall": 1.0,
+          "cls_macro_f1": 1.0,
+          "cls_balanced_acc": 1.0,
+          "cls_weighted_f1": 1.0
+        }
+      }
+    },
+    {
+      "fold_name": "fold_04",
+      "split_id": 4,
+      "train_path": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/splits/fold_04_train.h5",
+      "val_path": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/splits/fold_04_val.h5",
+      "split_summary": {
+        "fold_name": "fold_04",
+        "split_id": 4,
+        "train": {
+          "num_samples": 337,
+          "class_counts_dense": {
+            "0": 113,
+            "1": 109,
+            "2": 75,
+            "3": 40
+          },
+          "class_names_dense": {
+            "0": "清水",
+            "1": "盐水",
+            "2": "混合物",
+            "3": "无渗漏"
+          },
+          "num_groups": 115
+        },
+        "val": {
+          "num_samples": 84,
+          "class_counts_dense": {
+            "0": 29,
+            "1": 29,
+            "2": 18,
+            "3": 8
+          },
+          "class_names_dense": {
+            "0": "清水",
+            "1": "盐水",
+            "2": "混合物",
+            "3": "无渗漏"
+          },
+          "num_groups": 29
+        },
+        "train_path": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/splits/fold_04_train.h5",
+        "val_path": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/splits/fold_04_val.h5"
+      },
+      "run_dir": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/fold_04/training/20260413_103325",
+      "eval": {
+        "run_dir": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/fold_04/training/20260413_103325",
+        "num_val_samples": 84,
+        "overall_accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "macro_f1": 1.0,
+        "weighted_f1": 1.0,
+        "confusion_matrix": [
+          [
+            29,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            29,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            18,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            8
+          ]
+        ],
+        "dense_class_names": {
+          "0": "清水",
+          "1": "盐水",
+          "2": "混合物",
+          "3": "无渗漏"
+        },
+        "classification_report": {
+          "清水": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 29
+          },
+          "盐水": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 29
+          },
+          "混合物": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 18
+          },
+          "无渗漏": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 8
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 84
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 84
+          }
+        }
+      },
+      "training": {
+        "run_dir": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/fold_04/training/20260413_103325",
+        "best_epoch": 285,
+        "best_metric": "val_cls_macro_f1",
+        "best_score": 1.0,
+        "best_ranking_keys": [
+          "cls_macro_f1",
+          "global_miou",
+          "global_leak_iou"
+        ],
+        "best_ranking": [
+          1.0,
+          0.958817160477519,
+          0.960592100954086
+        ],
+        "best_val_metrics": {
+          "loss": 0.28221519105136395,
+          "iou": 0.8790294123106731,
+          "leak_iou": 0.8031703830110537,
+          "precision": 0.9624412118560648,
+          "recall": 0.9980039014653178,
+          "f1": 0.9799000011135734,
+          "global_leak_iou": 0.960592100954086,
+          "global_bg_iou": 0.957042220000952,
+          "global_miou": 0.958817160477519,
+          "accuracy": 0.9790155319940477,
+          "tp": 43998,
+          "fp": 1717,
+          "tn": 40213,
+          "fn": 88,
+          "cls_loss": 0.00011715404828767835,
+          "cls_acc": 1.0,
+          "cls_macro_precision": 1.0,
+          "cls_macro_recall": 1.0,
+          "cls_macro_f1": 1.0,
+          "cls_balanced_acc": 1.0,
+          "cls_weighted_f1": 1.0
+        }
+      }
+    },
+    {
+      "fold_name": "fold_05",
+      "split_id": 5,
+      "train_path": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/splits/fold_05_train.h5",
+      "val_path": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/splits/fold_05_val.h5",
+      "split_summary": {
+        "fold_name": "fold_05",
+        "split_id": 5,
+        "train": {
+          "num_samples": 337,
+          "class_counts_dense": {
+            "0": 110,
+            "1": 113,
+            "2": 75,
+            "3": 39
+          },
+          "class_names_dense": {
+            "0": "清水",
+            "1": "盐水",
+            "2": "混合物",
+            "3": "无渗漏"
+          },
+          "num_groups": 115
+        },
+        "val": {
+          "num_samples": 84,
+          "class_counts_dense": {
+            "0": 32,
+            "1": 25,
+            "2": 18,
+            "3": 9
+          },
+          "class_names_dense": {
+            "0": "清水",
+            "1": "盐水",
+            "2": "混合物",
+            "3": "无渗漏"
+          },
+          "num_groups": 29
+        },
+        "train_path": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/splits/fold_05_train.h5",
+        "val_path": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/splits/fold_05_val.h5"
+      },
+      "run_dir": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/fold_05/training/20260413_104759",
+      "eval": {
+        "run_dir": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/fold_05/training/20260413_104759",
+        "num_val_samples": 84,
+        "overall_accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "macro_f1": 1.0,
+        "weighted_f1": 1.0,
+        "confusion_matrix": [
+          [
+            32,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            25,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            18,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            9
+          ]
+        ],
+        "dense_class_names": {
+          "0": "清水",
+          "1": "盐水",
+          "2": "混合物",
+          "3": "无渗漏"
+        },
+        "classification_report": {
+          "清水": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 32
+          },
+          "盐水": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 25
+          },
+          "混合物": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 18
+          },
+          "无渗漏": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 9
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 84
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 84
+          }
+        }
+      },
+      "training": {
+        "run_dir": "/ai/0309/cloud/classification_feasibility/generalization_runs_mtl/B3_MTL_Full/fold_05/training/20260413_104759",
+        "best_epoch": 215,
+        "best_metric": "val_cls_macro_f1",
+        "best_score": 1.0,
+        "best_ranking_keys": [
+          "cls_macro_f1",
+          "global_miou",
+          "global_leak_iou"
+        ],
+        "best_ranking": [
+          1.0,
+          0.9922846821457496,
+          0.9924216563118727
+        ],
+        "best_val_metrics": {
+          "loss": 0.1784382757420341,
+          "iou": 0.9093722070106173,
+          "leak_iou": 0.8266564073232513,
+          "precision": 0.9955937079062122,
+          "recall": 0.996799853707598,
+          "f1": 0.9961964157214817,
+          "global_leak_iou": 0.9924216563118727,
+          "global_bg_iou": 0.9921477079796265,
+          "global_miou": 0.9922846821457496,
+          "accuracy": 0.9961286272321429,
+          "tp": 43608,
+          "fp": 193,
+          "tn": 42075,
+          "fn": 140,
+          "cls_loss": 7.338256242898449e-05,
+          "cls_acc": 1.0,
+          "cls_macro_precision": 1.0,
+          "cls_macro_recall": 1.0,
+          "cls_macro_f1": 1.0,
+          "cls_balanced_acc": 1.0,
+          "cls_weighted_f1": 1.0
+        }
+      }
+    }
+  ],
+  "aggregate_metrics": {
+    "num_folds": 5,
+    "accuracy_mean": 0.9976470588235294,
+    "accuracy_std": 0.00470588235294116,
+    "balanced_accuracy_mean": 0.9983333333333334,
+    "balanced_accuracy_std": 0.003333333333333322,
+    "macro_f1_mean": 0.9967715899919289,
+    "macro_f1_std": 0.006456820016142029,
+    "weighted_f1_mean": 0.9976831410530312,
+    "weighted_f1_std": 0.0046337178939372505,
+    "global_miou_mean": 0.9808873989237797,
+    "global_miou_std": 0.014139270541354752,
+    "global_leak_iou_mean": 0.9814722816273485,
+    "global_leak_iou_std": 0.01359526033827954,
+    "seg_precision_mean": 0.9890122569038559,
+    "seg_precision_std": 0.013301236100598326,
+    "seg_recall_mean": 0.9923705701492593,
+    "seg_recall_std": 0.009310325510924804,
+    "seg_f1_mean": 0.9906018219039741,
+    "seg_f1_std": 0.006951790033116815,
+    "best_epoch_mean": 259.0,
+    "best_epoch_std": 36.52396473549935
+  }
+}

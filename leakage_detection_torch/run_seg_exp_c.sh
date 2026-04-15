@@ -1,0 +1,21 @@
+#!/bin/sh
+set -eu
+
+SCRIPT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
+
+export TRAIN_PATH="${TRAIN_PATH:-/ai/0309/cloud/full_area_train_v2.h5}"
+export TEST_PATH="${TEST_PATH:-/ai/0309/cloud/full_area_val_v2.h5}"
+export OUTPUT_DIR="${OUTPUT_DIR:-/ai/0309/cloud/output/seg_exp_c}"
+export BOUNDARY_INPUT_MODE="${BOUNDARY_INPUT_MODE:-features_fine_probs}"
+export SEG_ONLY="${SEG_ONLY:-1}"
+
+export BEST_METRIC="${BEST_METRIC:-val_global_leak_iou}"
+export TRAIN_SAMPLER="${TRAIN_SAMPLER:-shuffle}"
+export SEG_USE_CLASS_WEIGHTS="${SEG_USE_CLASS_WEIGHTS:-0}"
+export SCHEDULER="${SCHEDULER:-cosine}"
+export WARMUP_EPOCHS="${WARMUP_EPOCHS:-10}"
+export MIN_LR="${MIN_LR:-1e-5}"
+export TOPK_CHECKPOINTS="${TOPK_CHECKPOINTS:-5}"
+export EPOCHS="${EPOCHS:-300}"
+
+exec sh "${SCRIPT_DIR}/run_v2_segonly.sh"

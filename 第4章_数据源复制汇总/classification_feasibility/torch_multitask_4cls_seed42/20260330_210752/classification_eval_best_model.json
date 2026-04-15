@@ -1,0 +1,77 @@
+{
+  "run_dir": "/ai/0309/cloud/output/classification_feasibility/torch_multitask_4cls_seed42/20260330_210752",
+  "checkpoint": "best_model.pt",
+  "num_val_samples": 85,
+  "mapped_label_semantics": {
+    "0": "清水",
+    "1": "盐水",
+    "2": "混合物",
+    "3": "无渗漏"
+  },
+  "confusion_matrix": [
+    [
+      28,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      28,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      18,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      10
+    ]
+  ],
+  "overall_accuracy": 0.9882352941176471,
+  "classification_report": {
+    "清水": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 28
+    },
+    "盐水": {
+      "precision": 0.9655172413793104,
+      "recall": 1.0,
+      "f1-score": 0.9824561403508771,
+      "support": 28
+    },
+    "混合物": {
+      "precision": 1.0,
+      "recall": 0.9473684210526315,
+      "f1-score": 0.972972972972973,
+      "support": 19
+    },
+    "无渗漏": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 10
+    },
+    "accuracy": 0.9882352941176471,
+    "macro avg": {
+      "precision": 0.9913793103448276,
+      "recall": 0.9868421052631579,
+      "f1-score": 0.9888572783309626,
+      "support": 85
+    },
+    "weighted avg": {
+      "precision": 0.9886409736308317,
+      "recall": 0.9882352941176471,
+      "f1-score": 0.98817951078013,
+      "support": 85
+    }
+  }
+}

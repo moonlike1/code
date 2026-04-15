@@ -1,0 +1,42 @@
+{
+  "task_name": "4-class-liquid-type-classification",
+  "data_path": "/ai/0309/cloud/liquid_leakage_dataset_with_groups.h5",
+  "split_mode": "group_kfold",
+  "test_size": 0.2,
+  "n_splits": 5,
+  "seed": 42,
+  "group_labels_path": "/ai/0309/cloud/classification_feasibility/generalization_groups/liquid_leakage_dataset_with_groups_aligned_chrono_block_k5.json",
+  "dense_class_names": {
+    "0": "清水",
+    "1": "盐水",
+    "2": "混合物",
+    "3": "无渗漏"
+  },
+  "raw_to_dense_label_map": {
+    "0": 0,
+    "1": 1,
+    "4": 2,
+    "5": 3
+  },
+  "train_args": {
+    "num_points": 1024,
+    "batch_size": 16,
+    "epochs": 300,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "seg_weight": 1.0,
+    "cls_weight": 1.0,
+    "augment": true,
+    "augment_mode": "strong",
+    "device": "cuda",
+    "val_interval": 5,
+    "train_sampler": "shuffle",
+    "best_metric": "val_cls_macro_f1",
+    "use_noise_guidance": true,
+    "use_progressive": true,
+    "use_noise_leak_corr": true,
+    "use_multi_scale": true,
+    "use_uncertainty_fusion": true,
+    "use_simple_uncertainty": false
+  }
+}

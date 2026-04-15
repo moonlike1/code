@@ -1,0 +1,215 @@
+{
+  "dense_summary_path": "/ai/0309/cloud/output/v2_training_torch_dataset_v2_segonly/20260327_223510/dense_pointcloud_visualizations_curated8/dense_pointcloud_inference_summary.json",
+  "output_dir": "/ai/0309/cloud/output/v2_training_torch_dataset_v2_segonly/20260327_223510/model_comparison_reference_curated8",
+  "gallery": "/ai/0309/cloud/output/v2_training_torch_dataset_v2_segonly/20260327_223510/model_comparison_reference_curated8/comparison_gallery_reference.png",
+  "models": [
+    "DGCNN",
+    "RandLA-Net",
+    "Ours",
+    "Ground Truth"
+  ],
+  "saved_samples": [
+    {
+      "rank": 1,
+      "area_id": 5,
+      "grid_x": 22,
+      "grid_y": 2,
+      "figure": "/ai/0309/cloud/output/v2_training_torch_dataset_v2_segonly/20260327_223510/model_comparison_reference_curated8/sample_figures/compare_rank_01_area_05_gx_022_gy_02.png",
+      "models": [
+        {
+          "model": "DGCNN",
+          "positive_ratio": 0.08874771913225654
+        },
+        {
+          "model": "RandLA-Net",
+          "positive_ratio": 0.04979387713725755
+        },
+        {
+          "model": "Ours",
+          "positive_ratio": 0.08108400351422586
+        },
+        {
+          "model": "Ground Truth",
+          "positive_ratio": 0.08031357707643441
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "area_id": 2,
+      "grid_x": 93,
+      "grid_y": 2,
+      "figure": "/ai/0309/cloud/output/v2_training_torch_dataset_v2_segonly/20260327_223510/model_comparison_reference_curated8/sample_figures/compare_rank_02_area_02_gx_093_gy_02.png",
+      "models": [
+        {
+          "model": "DGCNN",
+          "positive_ratio": 0.05711675656864451
+        },
+        {
+          "model": "RandLA-Net",
+          "positive_ratio": 0.0333072327591207
+        },
+        {
+          "model": "Ours",
+          "positive_ratio": 0.05273766022852503
+        },
+        {
+          "model": "Ground Truth",
+          "positive_ratio": 0.05209964619221623
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "area_id": 6,
+      "grid_x": 35,
+      "grid_y": 1,
+      "figure": "/ai/0309/cloud/output/v2_training_torch_dataset_v2_segonly/20260327_223510/model_comparison_reference_curated8/sample_figures/compare_rank_03_area_06_gx_035_gy_01.png",
+      "models": [
+        {
+          "model": "DGCNN",
+          "positive_ratio": 0.10617189735762664
+        },
+        {
+          "model": "RandLA-Net",
+          "positive_ratio": 0.0022894209672803586
+        },
+        {
+          "model": "Ours",
+          "positive_ratio": 0.04082800724983306
+        },
+        {
+          "model": "Ground Truth",
+          "positive_ratio": 0.045359152914242105
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "area_id": 5,
+      "grid_x": 52,
+      "grid_y": 2,
+      "figure": "/ai/0309/cloud/output/v2_training_torch_dataset_v2_segonly/20260327_223510/model_comparison_reference_curated8/sample_figures/compare_rank_04_area_05_gx_052_gy_02.png",
+      "models": [
+        {
+          "model": "DGCNN",
+          "positive_ratio": 0.14324481488660593
+        },
+        {
+          "model": "RandLA-Net",
+          "positive_ratio": 0.04657602525406363
+        },
+        {
+          "model": "Ours",
+          "positive_ratio": 0.07657907124858085
+        },
+        {
+          "model": "Ground Truth",
+          "positive_ratio": 0.08790463268075209
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "area_id": 5,
+      "grid_x": 78,
+      "grid_y": 0,
+      "figure": "/ai/0309/cloud/output/v2_training_torch_dataset_v2_segonly/20260327_223510/model_comparison_reference_curated8/sample_figures/compare_rank_05_area_05_gx_078_gy_00.png",
+      "models": [
+        {
+          "model": "DGCNN",
+          "positive_ratio": 0.07593121068595078
+        },
+        {
+          "model": "RandLA-Net",
+          "positive_ratio": 0.03460383391355018
+        },
+        {
+          "model": "Ours",
+          "positive_ratio": 0.06121412242824486
+        },
+        {
+          "model": "Ground Truth",
+          "positive_ratio": 0.0715235548118155
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "area_id": 5,
+      "grid_x": 74,
+      "grid_y": 2,
+      "figure": "/ai/0309/cloud/output/v2_training_torch_dataset_v2_segonly/20260327_223510/model_comparison_reference_curated8/sample_figures/compare_rank_06_area_05_gx_074_gy_02.png",
+      "models": [
+        {
+          "model": "DGCNN",
+          "positive_ratio": 0.07614383188915401
+        },
+        {
+          "model": "RandLA-Net",
+          "positive_ratio": 0.05147417918986423
+        },
+        {
+          "model": "Ours",
+          "positive_ratio": 0.0641997013967377
+        },
+        {
+          "model": "Ground Truth",
+          "positive_ratio": 0.06777177780568462
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "area_id": 3,
+      "grid_x": 39,
+      "grid_y": 2,
+      "figure": "/ai/0309/cloud/output/v2_training_torch_dataset_v2_segonly/20260327_223510/model_comparison_reference_curated8/sample_figures/compare_rank_07_area_03_gx_039_gy_02.png",
+      "models": [
+        {
+          "model": "DGCNN",
+          "positive_ratio": 0.05488343341575415
+        },
+        {
+          "model": "RandLA-Net",
+          "positive_ratio": 0.021370540445072413
+        },
+        {
+          "model": "Ours",
+          "positive_ratio": 0.041475332626869185
+        },
+        {
+          "model": "Ground Truth",
+          "positive_ratio": 0.045508065465677615
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "area_id": 4,
+      "grid_x": 12,
+      "grid_y": 2,
+      "figure": "/ai/0309/cloud/output/v2_training_torch_dataset_v2_segonly/20260327_223510/model_comparison_reference_curated8/sample_figures/compare_rank_08_area_04_gx_012_gy_02.png",
+      "models": [
+        {
+          "model": "DGCNN",
+          "positive_ratio": 0.1293631288090807
+        },
+        {
+          "model": "RandLA-Net",
+          "positive_ratio": 0.06483783438223636
+        },
+        {
+          "model": "Ours",
+          "positive_ratio": 0.10566691764572175
+        },
+        {
+          "model": "Ground Truth",
+          "positive_ratio": 0.08303618360301743
+        }
+      ]
+    }
+  ],
+  "num_votes": 32,
+  "prob_threshold": 0.5
+}
